@@ -24,3 +24,4 @@ for tweet in tweepy.Cursor(api.search,q="#ANTIFA",count=100,#Use any search term
                            since="2017-04-03").items():
     print (tweet.created_at, tweet.text)
     csvWriter.writerow([tweet.created_at, tweet.text.encode('utf-8')])
+#
